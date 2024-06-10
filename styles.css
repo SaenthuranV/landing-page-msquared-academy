@@ -4,46 +4,24 @@ body {
   font-family: 'Poppins', sans-serif; /* Set Poppins as default font */
 }
 
-body,
-.navbar {
-  background-color: #f0f8ff;
-}
-
-.navbar {
-  padding-left: 0; /* Remove left padding */
+.custom-navbar {
+  background-color: white; /* Set the background color to white */
+  height: 60px; /* Adjust to a suitable height */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1rem;
 }
 
 .navbar-brand {
-  flex-grow: 1;
   display: flex;
-  justify-content: flex-start; /* Align Home link to the left */
   align-items: center;
 }
 
-.navbar-item {
-  padding-left: 0; /* Remove left padding */
-}
-
-.msquared-title {
-  font-size: 1.2rem; /* Ensure the font size remains the same */
-  background: linear-gradient(90deg, #395aa7, #b86e52, #ba454a);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  text-fill-color: transparent;
-  animation: gradientAnimation 3s infinite;
-}
-
-@keyframes gradientAnimation {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
+.msquared-logo {
+  height: 60px; /* Set the height to fit within the navbar */
+  width: auto; /* Maintain aspect ratio */
+  margin-right: 0.5rem; /* Add some space between the logo and text */
 }
 
 .hero {
@@ -206,15 +184,15 @@ body,
 
 /* Add specific color classes for the hero titles */
 .transform-text {
-  color: #ba454a !important; /* Color for "Transform" */
+  color: #ef4536!important; /* Color for "Transform" */
 }
 
 .ideas-text {
-  color: #b86e52 !important; /* Color for "Ideas" */
+  color: #ffc969 !important; /* Color for "Ideas" */
 }
 
 .reality-text {
-  color: #395aa7 !important; /* Color for "Reality" */
+  color: #3a79ea !important; /* Color for "Reality" */
 }
 
 .welcome-section {
@@ -283,5 +261,45 @@ body,
   }
   .hero-image {
     width: 200px; /* Adjust image size for smaller screens */
+  }
+}
+
+/* Additional Media Queries for Specific Devices */
+@media (max-width: 414px) { /* iPhone SE, iPhone XR, Pixel 7 */
+  .hero-title {
+    font-size: 1.5rem; /* Further adjust font size for smaller screens */
+  }
+  .hero-image {
+    width: 150px; /* Adjust image size for smaller screens */
+  }
+  .text-container {
+    font-size: 1rem; /* Adjust text size */
+    line-height: 1.4; /* Adjust line height */
+  }
+}
+
+@media (max-width: 375px) { /* iPhone 12 Pro, iPhone 14 Pro Max */
+  .hero-title {
+    font-size: 1.2rem; /* Further adjust font size for smaller screens */
+  }
+  .hero-image {
+    width: 130px; /* Adjust image size for smaller screens */
+  }
+  .text-container {
+    font-size: 0.9rem; /* Adjust text size */
+    line-height: 1.4; /* Adjust line height */
+  }
+}
+
+@media (max-width: 320px) { /* Smaller mobile devices */
+  .hero-title {
+    font-size: 1rem; /* Further adjust font size for smaller screens */
+  }
+  .hero-image {
+    width: 100px; /* Adjust image size for smaller screens */
+  }
+  .text-container {
+    font-size: 0.8rem; /* Adjust text size */
+    line-height: 1.4; /* Adjust line height */
   }
 }
